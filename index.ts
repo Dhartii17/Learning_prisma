@@ -1,13 +1,16 @@
 import { PrismaClient } from "@prisma/client";
+import { allOtherOP, createUser, deleteUser, getUser, updateUser } from "./src/QuriesController/QuriesContoller";
 const prisma = new PrismaClient();
 
 
 async function main() {
-    // const user = await prisma.user.create({ data: { name: "Amisha" } })
-    // console.log("user created", user);
 
-    const users = await prisma.user.findMany()
-    console.log("Get user list", users);
+    // createUser()
+    // getUser()
+    // updateUser()
+    // deleteUser()
+    // allOtherOP()
+
 
 }
 
