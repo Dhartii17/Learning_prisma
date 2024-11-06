@@ -138,6 +138,25 @@ const deleteUSerData = async () => {
 
 }
 
-export { createUserData, readUserData, updateUserData, deleteUSerData };
+const userSortData = async (page = 2, recordsPerPage = 3) => {
+    const user = await prisma.user.findMany({
+        orderBy: [
+            {
+                id: "asc"
+            }
+        ],
+        skip: (page - 1) * recordsPerPage,
+        take: recordsPerPage
+
+    })
+
+    console.log("Sort user data", user);
+    return user
+
+}
+
+
+
+export { createUserData, readUserData, updateUserData, deleteUSerData, userSortData };
 
 

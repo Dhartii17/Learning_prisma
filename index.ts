@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { createUserData, deleteUSerData, readUserData, updateUserData } from "./src/QuriesController/DocQueries";
+import { createUserData, deleteUSerData, readUserData, updateUserData, userPaginationWithCursor, userSortData } from "./src/QuriesController/DocQueries";
 import { updateUser } from "./src/QuriesController/QuriesContoller";
 // import { allOtherOP, createUser, deleteUser, getUser, updateUser } from "./src/QuriesController/QuriesContoller";
 const prisma = new PrismaClient();
@@ -19,7 +19,8 @@ async function main() {
     // createUserData()
     // readUserData()
     // updateUserData()
-    deleteUSerData()
+    // deleteUSerData()
+    // userSortData()
 }
 
 main().catch((e) => {
